@@ -1,0 +1,45 @@
+*{
+    margin: auto;
+}
+body{
+    
+    background-color:rgba(248, 153, 153, 0.616);
+    
+  
+    align-items: center;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+table{
+    margin: auto;
+    
+}
+input{
+    border-radius: 10px;
+    text-align: center;
+}
+.info{
+    background-color: darksalmon;
+}
+
+button:hover{
+    background-color: rgba(235, 247, 168, 0.74);
+    
+}
+button{
+   
+    border-radius: 10px;
+    height: 20%;
+    width:fit-content;
+}
+td,th{
+
+    border: 1px solid black;
+}
+
+#addForm{
+    border:black solid 1px;
+ 
+}

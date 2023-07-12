@@ -1,0 +1,44 @@
+<%- include ("header.ejs") %>
+<%- include ("menu.ejs") %>
+<main>
+    <table>
+        <tr>
+            <td colspan="100">
+                <form action="/R/Add" method="get">
+                    <button id="addinfo">Add Parameters+</button>                   
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <th>Edit duration:</th>
+            <th class="info">Duration:</th>
+            <th class="info">Light Level:</th>
+            <th>Delete duration:</th>
+                
+        </tr>
+        <% for(let item of data) { %>
+            <tr>
+                <td>
+                    <form action="/R/Edit" method="get">
+                        <input type="hidden" name="id" value="<%= item._id %>">
+                        <button>Edit</button>
+                    </form>
+                </td>
+
+                <td><%= item.duration %></td>                                        
+                <td><%= item.LightLvl %></td>
+             
+                         
+                <td>
+                    <form action="/R/Delete" method="post"
+                          onsubmit="return confirm('plaese confirm DELETE' );return false;">
+                        <input type="hidden" name="id" value="<%= item._id %>">
+                        <button>Delete</button>
+                    </form>
+                </td>
+            </tr>
+           
+        <% } %>
+    </table> 
+</main>
+<%- include ("footer.ejs") %>
